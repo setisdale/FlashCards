@@ -15,7 +15,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="-9dp"
+        android:layout_marginTop="-6dp"
         android:layout_marginEnd="-9dp"
         android:text="What is the powershouse of the cell?"
         android:textAlignment="center"
@@ -30,13 +30,23 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="526dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="520dp"
         android:text="The Mitochondria"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="40sp"
         android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/myBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_flashcard_plus" />
 
 
 </RelativeLayout>
