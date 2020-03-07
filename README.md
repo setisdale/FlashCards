@@ -21,7 +21,7 @@ Flashcard app that presents a question and when clicked shows a answer
 App takes in data from user and presents new questions to the screen
 
 ### App Walk-though
-<img src=http://g.recordit.co/neLN8xy3bn.gif width=200><br>
+<img src=http://g.recordit.co/yMipRJWc44.gif width=200><br>
 
 
 ## Required
