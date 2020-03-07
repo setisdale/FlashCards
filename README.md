@@ -13,3 +13,20 @@ Flashcard app that presents a question and when clicked shows a answer
 - [x] Push code to GitHu
 ## Optional
 - [x] toggle the flashcard between the question side and the answer side
+
+
+## Lab 2
+
+### App Description
+App takes in data from user and presents new questions to the screen
+
+### App Walk-though
+<img src=http://g.recordit.co/neLN8xy3bn.gif width=200><br>
+
+
+## Required
+- [ x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
+- [ x] The 'Add Card Screen' has a cancel button to take the user back to the main screen
+- [ x] User can enter and submit a Question and Answer through the 'Add Card Screen'
+- [ x] User will see the card they just created on the main screen when they press the 'Save Button'
+- [ x] Push your progress to GitHub!
