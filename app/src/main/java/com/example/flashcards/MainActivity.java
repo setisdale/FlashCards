@@ -47,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+
+        findViewById(R.id.next_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // advance our pointer index so we can show the next card
+                currentCardDisplayedIndex++;
+
+                // make sure we don't get an IndexOutOfBoundsError if we are viewing the last indexed card in our list
+                if (currentCardDisplayedIndex > allFlashcards.size() - 1) {
+                    currentCardDisplayedIndex = 0;
+                }
+
+                // set the question and answer TextViews with data from the database
+                ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+            }
+        });
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -66,4 +83,6 @@ public class MainActivity extends AppCompatActivity {
     }
     FlashcardDatabase flashcardDatabase;
     List<Flashcard> allFlashcards;
+    int currentCardDisplayedIndex = 0;
+
 }
