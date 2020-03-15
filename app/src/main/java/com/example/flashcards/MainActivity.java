@@ -7,10 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(0).getAnswer());
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -40,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         if(data == null) {
             return;
         }
@@ -50,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
             flashcardquestion.setText(s2);
             TextView flashcardAnswer = findViewById(R.id.flashcard_answer);
             flashcardAnswer.setText(s1);
+            flashcardDatabase.insertCard(new Flashcard(s2, s1));
         }
     }
-
-
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashcards;
 }
