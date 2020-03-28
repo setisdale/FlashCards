@@ -30,3 +30,17 @@ App takes in data from user and presents new questions to the screen
 - [x] User can enter and submit a Question and Answer through the 'Add Card Screen'
 - [x] User will see the card they just created on the main screen when they press the 'Save Button'
 - [x] Push your progress to GitHub!
+
+## Lab 3
+
+### App Description
+Flashcard  saves previously answered questions and answers and displays them. 
+
+### App Walk-though
+
+<img src="http://g.recordit.co/PJGkPynJ9z.gif" width=200><br>
+
+## Required
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
+
