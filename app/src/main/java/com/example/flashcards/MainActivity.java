@@ -83,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // set the question and answer TextViews with data from the database
-                ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
-                ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
+
 
                 final Animation leftOutAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.left_out);
                 final Animation rightInAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.right_in);
@@ -97,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
+                        ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(currentCardDisplayedIndex).getQuestion());
+                        ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(currentCardDisplayedIndex).getAnswer());
                     }
 
                     @Override
@@ -105,10 +106,12 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 });
+
                 findViewById(R.id.flashcard_question).startAnimation(leftOutAnim);
 
             }
         });
+
 
 
 
